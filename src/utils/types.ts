@@ -22,3 +22,7 @@ export interface DrawerProps {
   children: React.ReactNode;
   onCartIcon: () => void;
 }
+
+export interface CartItemProps {
+  product: Product;
+}
