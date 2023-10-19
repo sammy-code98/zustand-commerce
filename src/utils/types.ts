@@ -26,3 +26,11 @@ export interface DrawerProps {
 export interface CartItemProps {
   product: Product;
 }
+
+export interface ProductCardProp {
+  product: Product;
+}
+
+export interface ProductListProps {
+  products: Product[];
+}
