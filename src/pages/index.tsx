@@ -5,6 +5,7 @@ import Drawer from '@/components/ui/Drawer'
 import Cart from '@/components/cart/Cart'
 import ProductList from '@/components/products/ProductList'
 import { useProductStore } from '@/store/useProductStore'
+import { Dna } from 'react-loader-spinner'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -29,7 +30,16 @@ export default function Home() {
         <Cart />
       </Drawer>
       <main className={`container mx-auto md:w-10/12 py-8 px-4 ${inter.className}`} >
-        {isLoading ? <div className='text-center text-lg'>Loading...</div> : <ProductList products={products} />}
+        {isLoading ? <div className='flex items-center justify-center'>
+          <Dna
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
+          />
+        </div> : <ProductList products={products} />}
     </main>
     </>
   )
